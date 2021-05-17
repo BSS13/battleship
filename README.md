@@ -1,70 +1,46 @@
-# Getting Started with Create React App
+### Battleship State Tracker
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+The Game and code is being designed considering the main parameters of considerations as follows:
 
-## Available Scripts
+## Readability
 
-In the project directory, you can run:
+- Adequate Commends and helper usage is being defined along the code
+- Code standards including camelCase, meaningful names and being followed 
 
-### `npm start`
+## Maintainability
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+- The code is divided into adequate readable blocks with code being divided into multiple independant piece of code.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+## Testability
 
-### `npm test`
+- The provided console alongside game provides debugging and testing options
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Extensibility
 
-### `npm run build`
+- The code is designed to have extension in aspects like
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+a) The Battle ship positions are defined in 2D Array[][], which has one battleship at the moment, which can be extended by adding other battleships into it
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### Code Set up
 
-### `npm run eject`
+Step1) Clone the Project
+Step2) Inside the main enclosing project folder
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+- npm install (Install the packages)
+- npm start (Run the Project)
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+# By Default
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+Game has two battleship being placed, in a location being defined in battleships array in `Game.js`
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+## Code Structure
 
-## Learn More
+`Game.js`
+- This file defines the Game logic, battleship positions, Victory and End Logic
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+`Board.js`
+- This File defines the UI and attaches the listeners to each action being defined in Game.js
 
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+`App.js`
+- This file is the main starting file, where the game client is being defined to start the application, including the building environment and number of players

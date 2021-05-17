@@ -1,25 +1,12 @@
-import logo from './logo.svg';
-import './App.css';
+import { Client } from 'boardgame.io/react';
+import { Battleship } from './Game';
+import { BattleshipBoard } from './Board';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+//Set up the Gaming Board and configurations
+const App = Client({
+  game: Battleship,
+  board: BattleshipBoard,
+  numPlayers: 1
+ });
 
 export default App;
